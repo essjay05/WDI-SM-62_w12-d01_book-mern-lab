@@ -7,15 +7,15 @@ const
 // ROUTERS
 router
     // INDEX
-    .get('/api/books', Book.index)
+    .get('/', Book.index)
     // SHOW
-    .get('/api/books/:id', Book.show)
+    .get('/:id', Book.show)
     // CREATE
-    .post('/api/books', Book.create)
+    .post('/', Book.create)
     // UPDATE
-    .patch('/api/books/:id', Book.update)
+    .patch('/:id', Book.update)
     // DELETE
-    .delete('/api/books/:id', Book.destroy)
+    .delete('/:id', Book.destroy)
 
 
 // MAKE EXPORTABLE

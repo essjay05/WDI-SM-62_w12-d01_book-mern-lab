@@ -7,7 +7,7 @@ const
     app = express(),
     path = require('path'),
     logger = require('morgan'),
-    PORT = process.env.PORT || 3000;
+    PORT = process.env.PORT || 3001;
 
 // DATABASE
 require('./db');
@@ -18,6 +18,8 @@ require('./db');
 // MIDDLEWARE
 app.use(express.json());
 app.use(logger('dev'));
+
+const bookRouter = require('./routers/bookRouter');
 app.use('/api/', bookRouter);
 
 

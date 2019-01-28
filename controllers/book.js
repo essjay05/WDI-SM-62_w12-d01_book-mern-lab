@@ -11,7 +11,7 @@ module.exports =  {
 
     // SHOW
     show: (req, res) => {
-        Book.findById(req.params.id, (err, user) => {
+        Book.findById(req.params.id, (err, book) => {
             if (err) res.json({ success: false, err});
             res.json({ success: true, book });
         

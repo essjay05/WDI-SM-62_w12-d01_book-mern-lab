@@ -38,7 +38,8 @@ module.exports =  {
 
     // DELETE
     destroy: (req, res) => {
-        Book.findOneAndDelete(req.params.id, (err, deletedBook) => {
+        console.log(req.params.id)
+        Book.findByIdAndDelete(req.params.id, (err, deletedBook) => {
             if (err) res.json({ success: false, err });
             res.json({ success: true, deletedBook});
         })
